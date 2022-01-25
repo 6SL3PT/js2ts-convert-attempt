@@ -1,9 +1,12 @@
 import express, { Application, Request, Response } from 'express';
+import { logger } from './middleware/logger';
 
 const app: Application = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+app.use(logger);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Please enter directory path.');

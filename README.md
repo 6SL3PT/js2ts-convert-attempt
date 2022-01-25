@@ -19,6 +19,7 @@ I'm still at the beginners level, if you have any advice I'm willing to expand m
     #### inside src & dist folder
         - data : Stored simple arrays/items to use as data.
         - routes/ops : Stored files which contain respond & request to REST API methods.
+        - middleware : Stored logger (moment package) script.
 
 - node_modules : Stored some **tools** I use in this project.
 

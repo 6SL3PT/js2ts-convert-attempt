@@ -6,6 +6,8 @@ I have to remove some features because I can find a way to convert it to Typescr
 My original file is at another repository (name: 'expressjs_simpleREST_practice'),
 you can look up for it if you interested.
 
+I'm still at the beginners level, if you have any advice I'm willing to expand my knowledge.
+
 ## File Contains
 
 > **Note**: This may change from time to time

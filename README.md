@@ -1,7 +1,10 @@
-# Js to TS Attempt
+# JS to TS Attempt
 This repositories is created for practice & self-studying purpose.
 A simple scripts to try convert from **JavaScript** of previous project to **TypeScript**,
 I have to remove some features because I can find a way to convert it to Typescript.
+
+My original file is at another repository (name: 'expressjs_simpleREST_practice'),
+you can look up for it if you interested.
 
 ## File Contains
 
@@ -12,8 +15,8 @@ I have to remove some features because I can find a way to convert it to Typescr
 - src : Stored source **.ts files** (root directory).
 - dist : Stored **.js files** that created after compiled .ts in /src folder (output directory).
     #### inside src & dist folder
-        * data : Stored simple arrays/items to use as data.
-        * routes/ops : Stored files which contain **respond & request** to REST API methods.
+        - data : Stored simple arrays/items to use as data.
+        - routes/ops : Stored files which contain respond & request to REST API methods.
 
 - node_modules : Stored some **tools** I use in this project.
 

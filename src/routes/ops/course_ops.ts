@@ -6,7 +6,7 @@ router.get('/', (req: Request, res: Response) => {
     const exCourse = new exportedCourse;
     const courseDetail = exCourse.getData();
 
-    const semesterInput = req.query.semester;
+    const semesterInput: any = req.query.semester;
     const isActive: boolean = (req.query.active === 'true');
     const isNotActive: boolean = (req.query.active === 'false');
 
@@ -38,14 +38,16 @@ router.get('/', (req: Request, res: Response) => {
     // }
 
     if(isActive && semesterInput){
-        const found = courseDetail.some(course => course.active === true && course.semester === Number(req.query.semester))
+        const found: boolean = courseDetail.some(course => course.active === true && course.semester === Number(req.query.semester))
+        
         if(found){
             return res.json({data: courseDetail.filter(course => course.active === true && course.semester === Number(req.query.semester))});
         } else{
             return res.status(400).json({error_message: `Request 'semester=${req.query.semester}' and 'active=${req.query.active}' is not found.`})
         } 
     } else if(isNotActive && semesterInput){
-        const found = courseDetail.some(course => course.active === false && course.semester === Number(req.query.semester))
+        const found: boolean = courseDetail.some(course => course.active === false && course.semester === Number(req.query.semester))
+        
         if(found){
             return res.json({data: courseDetail.filter(course => course.active === false && course.semester === Number(req.query.semester))});
         } else{
@@ -59,14 +61,14 @@ router.get('/', (req: Request, res: Response) => {
         return res.json({data: courseDetail.filter(course => course.active === false)});
     } 
 
-    const otherInvalidActive = req.query.active;
+    const otherInvalidActive: any = req.query.active;
     
     if(otherInvalidActive){
         return res.status(400).json({error_message: `Input 'active=${req.query.active}' is invalid (boolean data type only.)`});
     }
 
     if(semesterInput){
-        const found = courseDetail.some(course => course.semester === Number(req.query.semester));
+        const found: boolean = courseDetail.some(course => course.semester === Number(req.query.semester));
         if(found){
             return res.json({data: courseDetail.filter(course => course.semester === Number(req.query.semester))});
         } 
@@ -82,9 +84,9 @@ router.get('/:course_code', (req, res) => {
     const exCourse = new exportedCourse;
     const courseDetail = exCourse.getData();
 
-    const found = courseDetail.some(course => course.code === req.params.course_code);
+    const found: boolean = courseDetail.some(course => course.code === req.params.course_code);
     if(found){
-        res.json({data: courseDetail.filter(course => course.code === req.params.course_code)});
+        res.json({data: courseDetail.find(course => course.code === req.params.course_code)});
     } 
     else{
         res.status(400).json({error_message: `Course ${req.params.course_code} is not found.`});

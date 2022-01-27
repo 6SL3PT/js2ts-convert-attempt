@@ -1,5 +1,5 @@
 type HelloJson = {
-    message: String
+    message: string
 }
 
 const helloJson: HelloJson = {

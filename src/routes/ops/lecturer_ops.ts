@@ -1,9 +1,13 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import uuidInt from 'uuid-int';
 import { exportedLecturer } from '../../data/LecturerDetail';
 const router = express.Router();
 
-router.post('/', (req, res) => {
+router.get('/', (req: Request, res: Response) => {
+    return res.send("The task didn't have GET method for lecturer, better luck next time ;)");
+});
+
+router.post('/', (req: Request, res: Response) => {
     const data = new exportedLecturer;
     const lecturerDetail = data.getData();
 
@@ -31,7 +35,7 @@ router.post('/', (req, res) => {
     } 
 });
 
-router.put('/:ID', (req, res) => {
+router.put('/:ID', (req: Request, res: Response) => {
     const data = new exportedLecturer;
     const lecturerDetail = data.getData();
 
@@ -52,7 +56,7 @@ router.put('/:ID', (req, res) => {
     }
 });
 
-router.delete('/:ID', (req, res) => {
+router.delete('/:ID', (req: Request, res: Response) => {
     const data = new exportedLecturer;
     const lecturerDetail = data.getData();
 

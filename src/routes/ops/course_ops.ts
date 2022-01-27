@@ -10,7 +10,7 @@ router.get('/', (req: Request, res: Response) => {
     const isActive: boolean = (req.query.active === 'true');
     const isNotActive: boolean = (req.query.active === 'false');
 
-    // search by name (not efficient)
+    // search by name (worked, but I think it's not efficient)
 
     // const nameInput = req.query.name;
 

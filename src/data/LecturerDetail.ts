@@ -21,7 +21,7 @@ const lecturerDetail: Lecturer[] = [
 ];
 
 export class exportedLecturer{
-    getData(){
+    getData(): Lecturer[]{
         return lecturerDetail;
     }
 }

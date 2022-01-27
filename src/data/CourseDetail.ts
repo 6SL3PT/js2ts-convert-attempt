@@ -39,7 +39,7 @@ const courseDetail: Course[] = [
 ];
 
 export class exportedCourse{
-    getData(){
+    getData(): Course[]{
         return courseDetail;
     }
 }

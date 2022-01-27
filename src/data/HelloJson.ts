@@ -7,7 +7,7 @@ const helloJson: HelloJson = {
 }
 
 export class exportedHJson{
-    getData(){
+    getData(): HelloJson{
         return helloJson;
     }
 }

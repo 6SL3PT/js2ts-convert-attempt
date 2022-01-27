@@ -16,7 +16,7 @@ router.get('/', (req: Request, res: Response) => {
 
     // if(nameInput){
     //     type lowerCaseName = {
-    //         name: String
+    //         name: string
     //     };
     //     const courseLower: lowerCaseName[] = [];
 
@@ -24,7 +24,7 @@ router.get('/', (req: Request, res: Response) => {
     //         courseLower.push({name: course.name.toLowerCase()}); 
     //     });
 
-    //     const found = courseLower.some(course => course.name === String(req.query.name).toLowerCase());
+    //     const found: boolean = courseLower.some(course => course.name === String(req.query.name).toLowerCase());
 
     //     if(found){
     //         courseLower.forEach(course => {

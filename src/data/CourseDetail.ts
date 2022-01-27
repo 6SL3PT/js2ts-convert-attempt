@@ -25,7 +25,7 @@ const courseDetail: Course[] = [
         active: false 
     },
     { 
-        code: 'CSS102', 
+        code: 'CSS202', 
         name: 'Database', 
         semester: 2, 
         active: true 

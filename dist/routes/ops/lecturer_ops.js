@@ -7,6 +7,9 @@ const express_1 = __importDefault(require("express"));
 const uuid_int_1 = __importDefault(require("uuid-int"));
 const LecturerDetail_1 = require("../../data/LecturerDetail");
 const router = express_1.default.Router();
+router.get('/', (req, res) => {
+    return res.send("The task didn't have GET method for lecturer, better luck next time ;)");
+});
 router.post('/', (req, res) => {
     const data = new LecturerDetail_1.exportedLecturer;
     const lecturerDetail = data.getData();
@@ -60,7 +63,7 @@ router.delete('/:ID', (req, res) => {
                 lecturerDetail.splice(index, 1);
             }
         });
-        return res.json({ message: 'Lecturer data deleted', current_data: lecturerDetail });
+        return res.json({ message: 'Lecturer deleted', current_data: lecturerDetail });
     }
     else {
         return res.status(400).json({ error_message: `ID: ${req.params.ID} not exist.` });

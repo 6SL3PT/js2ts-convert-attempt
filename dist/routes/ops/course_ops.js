@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     const semesterInput = req.query.semester;
     const isActive = (req.query.active === 'true');
     const isNotActive = (req.query.active === 'false');
-    // search by name (not efficient)
+    // search by name (worked, but I think it's not efficient)
     // const nameInput = req.query.name;
     // if(nameInput){
     //     type lowerCaseName = {
@@ -77,7 +77,7 @@ router.get('/:course_code', (req, res) => {
     const courseDetail = exCourse.getData();
     const found = courseDetail.some(course => course.code === req.params.course_code);
     if (found) {
-        res.json({ data: courseDetail.filter(course => course.code === req.params.course_code) });
+        res.json({ data: courseDetail.find(course => course.code === req.params.course_code) });
     }
     else {
         res.status(400).json({ error_message: `Course ${req.params.course_code} is not found.` });

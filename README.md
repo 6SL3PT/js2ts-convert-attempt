@@ -3,7 +3,7 @@ This repositories is created for practice & self-studying purpose.
 A simple scripts to try convert from **JavaScript** of my previous project to **TypeScript**,
 I have to remove some features because I can't find a way to convert it to Typescript.
 
-My original file is at another repository (name: 'expressjs_simpleREST_practice'),
+My original file is at another repository (name: 'express-RESTful-practice'),
 you can look up for it if you interested.
 
 I'm still at the beginners level, if you have any advice I'm willing to expand my knowledge.
